@@ -6,7 +6,8 @@ window.addEventListener("load", function() {
   }, 0);
 });
 
-var server = "https://brittono.herokuapp.com";
+//var server = "https://brittono.herokuapp.com";
+var server = "http://127.0.0.1:8888";
 
 $(document).ready(function() {
   OpenNav();

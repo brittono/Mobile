@@ -1,4 +1,5 @@
-var server = "https://brittono.herokuapp.com";
+//var server = "https://brittono.herokuapp.com";
+var server = "http://http://127.0.0.1:8888";
 
 function RandomColor() {
   var color = "#" + Math.floor(Math.random() * 16777215).toString(16);
