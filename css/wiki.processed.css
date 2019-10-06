@@ -1,0 +1,300 @@
+html {
+  background: url("../img/wave.jpg") no-repeat center center fixed;
+  background: #fff;
+  background-size: cover;
+}
+
+body {
+  background: none;
+  font-family: trebuchet ms, arial, helvetica, sans-serif;
+  margin: 0;
+  padding: 0 0 15px;
+  text-align: center;
+}
+
+#home_title {
+  position: relative;
+  left: 880px;
+  border: 2px solid black;
+  top: 0px;
+  box-shadow: none;
+}
+
+#page_title {
+  border: 2px solid black;
+  top: 0px;
+  box-shadow: none;
+  width: 450px;
+}
+
+#account {
+  border: 2px solid black;
+  top: 0px;
+  overflow: hidden;
+  left: 590px;
+  z-index: 3;
+}
+
+#account.wiki {
+  top: 990px;
+  left: 350px;
+}
+
+#top_nav {
+  border: none;
+  width: 340px;
+  position: relative;
+  top: 6 px;
+  left: 10px;
+  height: 30px;
+  border-radius: 10px 10px 10px 10px;
+  margin: 0;
+  /*background: url("../img/1337.png") repeat scroll 0 0 transparent;	*/
+  background: #000;
+}
+
+#top_nav_element1 {
+  display: none;
+}
+
+#top_nav_divider {
+  display: none;
+}
+
+#top_nav_element2 {
+  font-size: 12pt;
+  height: 30px;
+  width: 100%;
+  margin: 0;
+  font-weight: bold;
+  color: black;
+  text-align: left;
+  text-shadow: none;
+  letter-spacing: 2px;
+  /*font-family: trebuchet ms,arial,helvetica,sans-serif;	*/
+}
+
+#top_nav_element2 a {
+  color: black;
+}
+
+#top_nav_element2 a:visited {
+  color: #4747FF;
+  color: black;
+}
+
+#top_nav_element2 a:hover {
+  text-shadow: none;
+  text-decoration: none;
+}
+
+#header_container {
+  position: absolute;
+  top: 0;
+  margin: 0;
+}
+
+#header {
+  margin: 5px 0 0 0;
+  height: 193px;
+  position: relative;
+  top: 0px;
+}
+
+#header.wiki {
+  margin: 0;
+  overflow: visible;
+}
+
+#page_container {
+  margin: 0 auto;
+  border: 2px solid black;
+  width: 960px;
+  border: 2px solid black;
+  background: none;
+  background: url("../img/1337.png") repeat scroll 0 0 transparent;
+  background: url("../img/1337.png") repeat scroll 0 0 transparent;
+  height: 800px;
+  position: relative;
+}
+
+#page {
+  border: 1px solid #b79700;
+  border-radius: 0px;
+  /*box-shadow: -3px 3px 3px #919191;*/
+  box-shadow: none;
+  top: 180px;
+  margin: 0 auto;
+  left: 0px;
+  width: 450px;
+  height: 450px;
+  background: #ffecba;
+  background: url("../img/parchment_web.jpg") repeat scroll 0 0 transparent;
+  background: #fff;
+}
+
+#page.wiki {
+  top: 10px;
+}
+
+#logbooks_container {
+  top: 168px;
+  margin: 0;
+}
+
+#logbooks_container.wiki {
+  top: 45px;
+}
+
+#logbooks {
+  margin: 0;
+}
+
+#controls {
+  border: 0;
+  border-bottom: 2px solid black;
+  border-radius: 0;
+}
+
+#right_arrow {
+  left: 5px;
+}
+
+#catnav {
+  background: url("../img/parchment_web_nav.jpg") repeat scroll 0 0 transparent;
+  background: #ffecba;
+  background: white;
+  clear: both;
+  height: 44px;
+  margin: 0 0 0 0;
+  padding: 0;
+  width: 960px;
+  position: absolute;
+  top: 145px;
+  left: 0px;
+  border-top: none;
+  border-bottom: 2px solid black;
+}
+
+#catnav.wiki {
+  top: 0px;
+}
+
+#nav {
+  /*font-family: trebuchet ms,arial,helvetica,sans-serif;*/
+  list-style: none outside none;
+  margin: 5px 0 0 20px;
+  padding: 0;
+  left: 0;
+}
+
+#nav li {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+#nav li>.active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#nav a {
+  color: #000000;
+  display: block;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 32px;
+  margin: 0 0;
+  padding: 0 20px 0 15px;
+  font-size: 12pt;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+#nav li a:hover {
+  color: #6598b8;
+  text-decoration: none;
+  display: block;
+  /*text-shadow: #919191 -5px 5px 5px; */
+}
+
+#cerebrit_header {
+  background: url('../img/steve_header.png') no-repeat;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  left: 10px;
+}
+
+#cerebrit_header_link {
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  left: 0px;
+}
+
+#stats_table {
+  margin: 0;
+  padding: 0;
+}
+
+.comment_link {
+  margin: 5px;
+  float: left;
+  border: 1px solid #BFBFBF;
+}
+
+.comment_time {
+  font-size: 8px;
+  float: right;
+  color: #BAB2FF;
+}
+
+.comment_intro {
+  background: #FFECAF;
+  text-align: left;
+  font-size: 12px;
+  border-bottom: 1px solid black;
+  padding: 5px 10px;
+  color: #595959;
+}
+
+.comment_text {
+  padding: 5px 20px;
+  font-size: 11px;
+  display: block;
+  padding: 5px 10px;
+  color: #595959;
+}
+
+.comment_email {
+  margin: 10px 0 0 0;
+  font-size: 12px;
+  color: #848484;
+}
+
+.comment_user {
+  position: relative;
+  float: left;
+  margin: 0 0 0 5px;
+}
+
+#logged_in_icon {
+  position: relative;
+  top: 5px;
+  left: 15px;
+  box-shadow: -3px 3px 3px #919191;
+}
+
+#edit_icon {
+  position: relative;
+  top: 45px;
+  left: 15px;
+  box-shadow: -3px 3px 3px #919191;
+}
+
+#edit_icon_image {
+  border: 1px solid black;
+}

@@ -1,0 +1,179 @@
+/* CSS Document */
+
+body {
+    background: url('../img/bg.png') repeat-x;
+	margin: 0;
+	padding: 0;
+}
+
+#header_container {
+	position: left;
+	margin-left: 0px;
+}
+
+#page_container {
+	display: block;
+	background: #fff;	
+	margin-top: 20px;
+	position: relative;
+	margin-left: 0px;
+}
+
+#controls {
+	border: 1px solid black;
+}
+
+.ui-dialog-titlebar {
+	border: 1px solid black;
+	border-bottom: 0;
+}
+
+#article_select {
+	border-bottom: 1px solid black;
+	margin-bottom: 10px;
+}
+
+#logbooks_container {
+	display: none;
+}
+
+#page {
+	max-width: 1275px;
+}
+
+.tile {
+	width: 100px;
+	height: 100px;	
+	display: tile;
+    margin: 0px;
+    padding: 0 0 0 0;
+	
+}
+
+.tile_wrapper {
+	margin: 0px;
+	position: absolute;	
+	display: tile;
+	width: auto;
+	height: auto;
+}
+
+@media (min-width:200px) {
+#header_container {
+	width: 200px;	
+	height: 160px;
+}
+	
+#page_container {
+	height: 260px;	
+	width: 200px;
+}	
+#page {
+	height: 260px;	
+	width: 200px;
+}
+}
+
+@media (min-width: 342px) {
+#header_container {
+	width: 340px;	
+	height: 160px;
+}
+	
+#page_container {
+	height: 440px;	
+	width: 340px;
+}	
+#page {
+	height: 440px;	
+	width: 340px;
+}	
+}
+
+@media (min-width: 491px) {
+#header_container {
+	width: 490px;	
+	height: 160px;
+}
+	
+#page_container {
+	height: 634px;	
+	width: 490px;
+}	
+#page {
+	height: 634px;	
+	width: 490px;
+}
+}
+
+@media (min-width:662px) {
+#header_container {
+	width: 660px;	
+	height: 160px;
+}
+	
+#page_container {
+	height: 854px;	
+	width: 660px;
+}	
+#page {
+	height: 854px;	
+	width: 660px;
+}
+}
+
+@media (min-width:789px) {
+#header_container {
+	width: 788px;	
+	height: 160px;
+}
+	
+#page_container {
+	width: 788px;	
+	height: 1020px;
+}	
+#page {
+	width: 788px;	
+	height: 1020px;
+}
+}
+
+@media (min-width: 1001px) {
+
+#header_container {
+	width: 1000px;	
+	height: 160px;
+}
+	
+#page_container {
+	width: 1000px;	
+	height: 1294px;
+}	
+#page {
+	width: 1000px;	
+	height: 1294px;
+}
+}
+
+@media (min-width:1275px) {
+
+#header_container {
+	width: 1275px;
+	height: 160px;
+}
+
+#page_container {
+	height: 1650px;	
+	width: 1275px;
+}
+
+#page {
+	height: 1650px;	
+	width: 1275px;
+}
+
+#home_title {
+	width: 200px;
+}
+
+}

@@ -1,0 +1,21 @@
+html
+{
+	background: #2B2B2B;
+}
+
+#page_container
+{
+	border-radius: 20px 130px 0 0;
+	position: relative;
+	top: 30px;
+}
+
+#header
+{
+	top: -30px;
+}
+
+#catnav
+{
+	border-top: 2px solid black;
+} 
