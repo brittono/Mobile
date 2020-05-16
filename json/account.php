@@ -48,19 +48,19 @@ class DB
 
 	public function DbConnect($SQL)
 	{
-		//$db = new mysqli('localhost', 'root', 'sorbo123', 'cerebrit');
-		$db = pg_connect("host=ec2-184-73-210-189.compute-1.amazonaws.com dbname=d9v0f2hs6rppvr user=mryoltfwkygite password=83c5e8c819a1c57f182374231a8a6c2e997ffd40011325df2ae6c47ffcff9a67");
-		if($result= pg_query("$SQL"))
+		$db = new mysqli('localhost', 'root', 'root', 'cerebrit');
+		//$db = pg_connect("host=ec2-184-73-210-189.compute-1.amazonaws.com dbname=d9v0f2hs6rppvr user=mryoltfwkygite password=83c5e8c819a1c57f182374231a8a6c2e997ffd40011325df2ae6c47ffcff9a67");
+		if($result= mysqli_query("$SQL"))
 		{
 			$this->exec= true;
-			//$this->rows= pg_affected_rows($db);
-			//$this->info= pg_info($db);
+			$this->rows= mysqli_affected_rows($db);
+			$this->info= mysqli_info($db);
 		}
 		
-		//$this->insert_id= mysqli_insert_id($db);
-		//$this->error= $db->error;
+		$this->insert_id= mysqli_insert_id($db);
+		$this->error= $db->error;
 
-		//$db->pg_close();
+		$db->close();
 
 		return $result;
 	}
@@ -693,13 +693,10 @@ class User extends DB
 				AND confirmed= '1' 
 				LIMIT 1 ;";	
 
-		if($result= $this->DbConnect($SQL))
-		{
-			if($row= $result->fetch_assoc())
 
 		if($result= $this->DbConnect($SQL))
 		{
-			if($result->pg_fetch_assoc())
+			if($result->fetch_assoc())
 			{
 				$auth_key= $row['auth_key'];
 				$user_name= $row['user_name'];
@@ -816,7 +813,7 @@ class User extends DB
 		
 		return $this->logged_in;
 	}
-	
+
 	public function FBLoggedIn()
 	{
 
