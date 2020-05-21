@@ -662,7 +662,7 @@ function LoadArticleList(chapter_id, logbook_id, handleData) {
     type: "POST",
     url: server + "/json/account.php",
     dataType: "jsonp",
-    jsonpCallback: "DisplayArticleList",
+    jsonpCallback: "LoadArticleList",
     data: {
       action: "ArticleList",
       chapter_id: chapter_id,
@@ -1195,7 +1195,7 @@ function LoadTemplate(name, vars_obj, handleData) {
     type: "GET",
     url: server + "/json/account.php",
     dataType: "jsonp",
-    jsonpCallback: "DisplayTemplate",
+    jsonpCallback: "LoadTemplate",
     data: {
       action: "Template",
       name: name,
@@ -2142,12 +2142,4 @@ function LoadZipfile() {
       handleData(data);
     }
   });
-}
-
-function DisplayArticleList() {
-  console.log('345');
-}
-
-function DispllayLoadFeed() {
-  console.log('456');
 }
