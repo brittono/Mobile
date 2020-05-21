@@ -1208,10 +1208,6 @@ function LoadTemplate(name, vars_obj, handleData) {
   });
 }
 
-function DisplayTemplate() {
-  console.log('123');
-}
-
 function ResetPassword(user_id, email, handleData) {
   $.ajax({
     type: "POST",
