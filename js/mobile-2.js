@@ -47,7 +47,7 @@ function ActivateMobileFooter() {
 function DisableMobileFooter() {
   $(".mobile_footer").draggable("disable");
   $("#footer_msg").html(
-    "Questions, Comments, Feedback? <a href='www.twitter.com/cerebrit'>@cerebrit</a>"
+    "Questions, Comments, Feedback? <a href='www.twitter.com/brittono'>@brittono</a>"
   );
 }
 
