@@ -48,7 +48,7 @@ class DB
 
 	public function DbConnect($SQL)
 	{
-		$db = new mysqli('localhost', 'root', 'root', 'cerebrit');
+		$db = new mysqli('localhost', 'root', 'root', 'coachable3');
 		//$db = pg_connect("host=ec2-184-73-210-189.compute-1.amazonaws.com dbname=d9v0f2hs6rppvr user=mryoltfwkygite password=83c5e8c819a1c57f182374231a8a6c2e997ffd40011325df2ae6c47ffcff9a67");
 		if($result= mysqli_query("$SQL"))
 		{
@@ -150,6 +150,7 @@ class DB
 		return $fields;
 	}	
 	
+	/*
 	public function FetchTemplate($name= "", $vars= array(), $enc_type= "", $vars_obj= "", $element=".mobile_page_wrapper")
 	{
 		if($name== "")
@@ -245,8 +246,13 @@ class DB
 			$this->template_name= $name;
 			echo $this->template_data;
 		}
-	*/
 	} 
+	*/
+
+	public function FetchTemplate() {
+
+		echo '123';
+	}
 
 	public function ParseTemplate($template_data= "", $vars= array())
 	{	
@@ -3785,8 +3791,6 @@ class Article extends Comment
 	
 }
 
-
-
 class Logbook extends Article
 {
 	public $logbook_name= "";
@@ -3984,6 +3988,7 @@ class Logbook extends Article
 		return $articles;
 	}
 	
+	/*
 	public function FetchArticleList($chapter_id= 0, $logbook_id= 0, $enc_type= "")
 	{
 		if($logbook_id== 0)
@@ -4113,11 +4118,10 @@ class Logbook extends Article
 			echo "DisplayArticleList(" . json_encode($json) . ");";
 		}
 		
-		
-		
 		return $list_data;
 	}
-	
+	*/
+
 	public function FetchRandomArticle($logbook_id= 0, $enc_type= "")
 	{
 		$SQL= "SELECT article_id, article_name FROM articles WHERE logbook_id= '$logbook_id' ORDER BY RAND() LIMIT 1";
@@ -4753,6 +4757,14 @@ $article= new Article();
 $logbook= new Logbook();
 $account= new Account();
 
+function FetchArticleList() {
+
+	header('Content-Type: application/json');
+	header("Access-Control-Allow-Origin: *");						
+	$json['list_data']= "345";
+	$json['sql']= $SQL;
+	echo "DisplayArticleList(" . json_encode($json) . ");";	
+}
 
 switch($action)
 {
@@ -4863,8 +4875,7 @@ switch($action)
 		$logbook->FetchArticle($logbook_id, $article_id, $page_index, $direction, $enc_type);
 		break;
 	case 'ArticleList':
-		//FetchArticleList($chapter_id, $logbook_id, $enc_type);
-		echo '456';
+		FetchArticleList($chapter_id, 4, $enc_type);
 		break;
 	case 'NextArticle':
 		$logbook->FetchNextArticle($article_id);
@@ -4885,6 +4896,7 @@ switch($action)
 			$enc_type= "json";
 		}
 		$logbook->FetchTemplate($name, $vars, $enc_type, $vars_obj);
+		break;
 		break;
 	case 'AppTemplate':
 		$vars= array();
@@ -4920,7 +4932,7 @@ switch($action)
 		$logbook->FetchArticle($logbook_id, $article_id, $page_index, $direction, $enc_type);
 		break;
 	case 'ArticleList':
-		$logbook->FetchArticleList($chapter_id, $logbook_id, $enc_type);
+		$article->FetchArticleList($chapter_id, $logbook_id, $enc_type);
 		break;	
 	case 'NextArticle':
 		$logbook->FetchNextArticle($article_id);

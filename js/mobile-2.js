@@ -6,8 +6,8 @@ window.addEventListener("load", function() {
   }, 0);
 });
 
-var server = "https://brittono.herokuapp.com";
-//var server = "http://127.0.0.1:8888";
+//var server = "https://brittono.herokuapp.com";
+var server = "http://127.0.0.1";
 
 $(document).ready(function() {
   OpenNav();
@@ -36,6 +36,8 @@ LoadTemplate("stats", { "": "" }, function(template) {
 });
 
 LoadArticleList("26", "4", function(list) {
+
+  alert('here3');
   $("#article_list_container").html(list.list_data);
 });
 
@@ -148,6 +150,11 @@ function LoadMobileArticle(article_id) {
 
 function OpenNav() {
   var nav = $("#home_title").attr("nav");
+
+  LoadArticleList("26", "20", function(list) {
+    $("#article_list_container").html(list.list_data);
+    $("#logbooks").attr("article_id", "2");
+  });
 
   if (nav == "close") {
     $("#home_title").attr("nav", "open");
